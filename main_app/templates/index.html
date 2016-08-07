@@ -5,15 +5,16 @@
 	</head>
 	<body>
 		<head>
-			<h1>This is my First Django Template</h1>
+			<h1>Greetings Mortal Fool!</h1>
 			{%for d in diseases%}
 				<p><h2>{{d.name}}</h2></p>
 				<p><b>Level of Pain: </b>{{d.pain}}</p>
 				{%if d.survivability > 0%}
-				<p><b>Chance of Survival: </b>{{d.survivability}}%</p>
+					<p><b>Chance of Survival: </b>{{d.survivability}}%</p>
 				{%else%}
-				<p><b>Chance of Survival: </b>Non-Existant!!</p>
+					<p><b>Chance of Survival: </b>Non-Existant!!</p>
 				{%endif%}
+				<p><b>Cure, pray tell: </b>{{d.cure}}</p>
 			{%endfor%}
 		</head>		
 	</body>
