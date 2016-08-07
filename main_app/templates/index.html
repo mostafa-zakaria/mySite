@@ -1,0 +1,20 @@
+{%load staticfiles%}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
+	</head>
+	<body>
+		<head>
+			<h1>This is my First Django Template</h1>
+			{%for d in diseases%}
+				<p><h2>{{d.name}}</h2></p>
+				<p><b>Level of Pain: </b>{{d.pain}}</p>
+				{%if d.survivability > 0%}
+				<p><b>Chance of Survival: </b>{{d.survivability}}%</p>
+				{%else%}
+				<p><b>Chance of Survival: </b>Non-Existant!!</p>
+				{%endif%}
+			{%endfor%}
+		</head>		
+	</body>
+</html>
